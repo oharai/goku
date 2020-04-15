@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/garupanojisan/goku/router"
+	"github.com/oharai/goku/router"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package authz
 import (
 	"context"
 
-	"github.com/garupanojisan/goku/models"
+	"github.com/oharai/goku/models"
 )
 
 type Auth interface {
@@ -12,10 +12,13 @@ type Auth interface {
 	// get current login user
 	User(ctx context.Context) models.User
 	// attempt authorization
-	Attempt(ctx context.Context, credentials []*Credential) bool
+	Attempt(ctx context.Context, credentials []*Credential) *Result
 	// logout
 	Logout(ctx context.Context) error
 }
 
 type Credential interface {
+}
+
+type Result interface {
 }

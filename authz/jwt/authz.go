@@ -1,10 +1,10 @@
-package password
+package jwt
 
 import (
 	"context"
 
-	"github.com/garupanojisan/goku/authz"
-	"github.com/garupanojisan/goku/models"
+	"github.com/oharai/goku/authz"
+	"github.com/oharai/goku/models"
 )
 
 type Auth struct {
@@ -18,8 +18,8 @@ func (a *Auth) User(ctx context.Context) models.User {
 	return nil
 }
 
-func (a *Auth) Attempt(ctx context.Context, credentials []*authz.Credential) bool {
-	return false
+func (a *Auth) Attempt(ctx context.Context, credentials []*authz.Credential) *authz.Result {
+	return nil
 }
 
 func (a *Auth) Logout(ctx context.Context) error {
